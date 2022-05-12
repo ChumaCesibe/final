@@ -104,3 +104,8 @@ taskInput.addEventListener("keyup", e => {
         showTodo(document.querySelector("span.active").id);
     }
 });
+
+function signout(){
+    alert(`Goodbye see you next time`)
+    return window.location.replace("Log-in.html")
+}

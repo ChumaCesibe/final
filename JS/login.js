@@ -10,7 +10,7 @@ function login(){
     if(email == users[i].email && password == users[i].password){
       
           alert(`Welcome back ${users[i].email}`)
-          return window.location.replace("../HTML/index.html")
+          return window.location.replace("index.html")
 
     }
   }
@@ -21,7 +21,9 @@ function register(){
     let email = document.getElementById("username").value
     let password = document.getElementById("password").value
     let confirmation = document.getElementById("Retype-password").value
-    if(confirmation == password){
+    if(email == "" || password == ""){
+      return alert("Please enter your details")
+    }else if(confirmation == password){
 
       let user = { 
         email,
@@ -34,7 +36,7 @@ function register(){
     
      alert("Welcome to On-da go listing!")
 
-     return window.location.replace("../HTML/index.html")
+     return window.location.replace("index.html")
 
  } else {
      return alert("confirmation failed")
